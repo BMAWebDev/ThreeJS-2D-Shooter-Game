@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Proiect 1 Curs Grafica</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      #bullets-count-container {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font-size: 20px;
+        font-family: monospace;
+        color: #fff;
+      }
+
+      #stats-container {
+        color: #fff;
+        position: absolute;
+        left: 15px;
+        font-size: 20px;
+        font-family: monospace;
+      }
+
+      #finished-round-container {
+        color: #fff;
+        font-size: 20px;
+        font-family: monospace;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <p id="bullets-count-container">Bullets left: <span id="bullets-count">0</span></p>
+
+    <div id="stats-container">
+      <p>Round: <span id="round">1</span></p>
+      <p>Score: <span id="score">0</span></p>
+    </div>
+
+    <div id="finished-round-container" class="hide">
+      Game over. <br />
+      Your score until now is:
+      <span id="final-score">0</span>.<br />
+      Do you want to keep playing? <br />
+
+      <button id="confirm-next-round-btn">Yes</button>
+      <button id="close-game-btn">No</button>
+    </div>
+
+    <script type="module" src="/index.ts"></script>
+  </body>
+</html>
